@@ -10,22 +10,26 @@ ziply is build with python and HTML5 and it runs on any modern browser allowing 
 To deploy ziply:
 
 - Create local development environment following this tutorial
-    https://devcenter.heroku.com/articles/getting-started-with-python
+-- https://devcenter.heroku.com/articles/getting-started-with-python
 - Add environment variables in ENVIRONMENT.txt to your account.
 - Deploy
 
 IMPORTANT!!! To initalize the database you must do the following:
 
-$heroku run python
-$> from app import db
-$> db.create_all()  #this will create all tables
+- $heroku run python
+- $> from app import db
+- $> db.create_all()  #this will create all tables
 
 After the database is initialized everything should work as expected.
 
 This codebase was created in a 3 week sprint for the #SalesForce $1M Hackathon.
 
 Special thanks to:
-Gage Morgan, Linda Patrick, & Ted Patrick for bringing ziply together.
+ - Gage Morgan
+ - Linda Patrick
+ - Ted Patrick
+
+Building ziply was great fun!
 
 Enjoy!
 
