@@ -1,0 +1,34 @@
+{% extends "_base.html" %}
+{% block title %}Templates{% endblock %}
+{% block content %}
+<div class="toolbar">
+    <p id="brand">
+        <a id="simple-menu" href="javascript:$.sidr()">
+            <i class="fa fa-bars"></i>
+        </a>
+    &nbsp;Templates</p>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="header borderNone">
+            {% for item in items %}
+            <div class="input-group">
+                <a href="/draft/new/{{ item.id }}"><span href="#edit" type="button" class="btn btn-default sqButton" style="width: 100%; height:34px;border-radius:0px;"><p class="pull-left" style="max-width:100px"><i class="fa fa-file-o"></i>&nbsp;&nbsp;{{ item.name }}</p></span></a>
+                <span class="input-group-btn">
+                    <a href="/template/edit/{{ item.id }}"><button type="button" class="btn btn-default" style="border-radius:0px;"><i class="fa fa-cog" style="color: black; height: 20px;font-size:14px;margin:3px -3px -3px -3px;"></i></button></a>
+                    <a href="javascript:ziply.deleteConfirm('/template/delete/{{ item.id }}');"><button type="button" class="btn btn-default" style="border-radius:0px;"><i class="fa fa-times" style="color: red; height: 20px;font-size:14px;margin:3px -3px -3px -3px;"></i></button></a>
+                </span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block footerblock %}
+<footer>
+<p style="text-align:center;font-size:10px;">&copy; zip.ly 2013</p>
+<a id="simple-menu"></a>
+</footer>
+{% endblock %}
+{% block scriptblock %}{% endblock %}

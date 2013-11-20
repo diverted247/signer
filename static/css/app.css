@@ -1,0 +1,96 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+ 
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+body{
+  padding: 0px;
+  margin: 0px;
+  overflow-x: hidden !important;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 0px;
+  line-height: 1.428571429;
+  color: #333;
+}
+a{
+  text-decoration: none !important;
+}
+span a{
+  color: black !important;
+}
+ul, menu, dir {
+  -webkit-padding-start: 0px;
+}
+.btn{
+  text-align: left !important;
+}
+.salesforce{
+  text-align: center !important;
+  border: 1px solid, #1c78b1 (0.11,0.471,0.694);
+  color:#FFF !important;
+  background: #2e8ec9;
+  background: -moz-linear-gradient(bottom, #2789c7 0%, #3f9fd9 100%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0%,#2789c7), color-stop(100%,#3f9fd9));
+  background: -webkit-linear-gradient(bottom, #2789c7 0%,#3f9fd9 100%);
+  background: -o-linear-gradient(bottom, #2789c7 0%,#3f9fd9 100%);
+  background: -ms-linear-gradient(bottom, #2789c7 0%,#3f9fd9 100%);
+  background: linear-gradient(bottom, #2789c7 0%, #3f9fd9 100%) bottom (0.153,0.537,0.78) to top(0.247,0.624,0.851)filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f9fd9', endColorstr='#2789c7',GradientType=0 );
+}
+#brand{
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 0px;
+}
+.signUp{
+  text-align: center;
+  border-radius: 0px !important;
+}
+.sqButton{
+  border-radius: 0px !important;
+}
+.toolbar{
+  background-color: #ccc;
+  padding: 6px 2px 4px 12px;
+  margin: 0px;
+}
+.listel{
+  margin: 0px !important;
+}
+.header{
+  text-align: center;
+}
+.underline{
+  border-bottom: 1px solid black;
+}
+.alterBackground{
+  background-color: #eee;
+}
+.well.borderNone{
+  border: none; 
+}
+

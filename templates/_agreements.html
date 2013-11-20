@@ -1,0 +1,30 @@
+{% extends "_base.html" %}
+{% block title %}Agreements{% endblock %}
+{% block content %}
+<div class="toolbar">
+    <p id="brand">
+        <a id="simple-menu" href="javascript:$.sidr()">
+            <i class="fa fa-bars"></i>
+        </a>
+    &nbsp;Agreements</p>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="header borderNone">
+            {% for item in items %}
+            <div>
+                <a href="/agreement/{{ item.id }}"><span href="#edit" type="button" class="btn btn-default sqButton" style="width: 100%; height:34px;border-radius:0px;"><p class="pull-left" style="max-width:100px"><i class="fa fa-lock"></i>&nbsp;&nbsp;{{ item.name }}</p></span></a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block footerblock %}
+<footer>
+<p style="text-align:center;font-size:10px;">&copy; zip.ly 2013</p>
+<a id="simple-menu"></a>
+</footer>
+{% endblock %}
+{% block scriptblock %}{% endblock %}

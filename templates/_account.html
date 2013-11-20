@@ -1,0 +1,36 @@
+{% extends "_base.html" %}
+{% block title %}Account{% endblock %}
+{% block content %}
+<div class="toolbar">
+    <p id="brand">
+        <a id="simple-menu" href="javascript:$.sidr()">
+            <i class="fa fa-bars"></i>
+        </a>
+    &nbsp;Account</p>
+</div>
+
+<div class="row">
+    <div class="col-xs-1">
+    </div>
+    <div class="col-xs-10">
+        <br/><br/>
+        <div class="col-xs-12">
+            <form role="form" style="padding:14px">
+              <div class="form-group" style="font-size:16px">
+                <label for="exampleInputEmail1">Restore Original Templates</label>
+                <a href="/account/restore"><button type="button" class="btn btn-default" style="border-radius:0px;">Restore</button></a>
+              </div>
+            </form>  
+        </div>  
+    </div>
+    <div class="col-xs-1">
+    </div>  
+</div>
+{% endblock %}
+{% block footerblock %}
+<footer>
+<p style="text-align:center;font-size:10px;">&copy; zip.ly 2013</p>
+<a id="simple-menu"></a>
+</footer>
+{% endblock %}
+{% block scriptblock %}{% endblock %}

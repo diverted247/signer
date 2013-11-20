@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Zip.ly - {% block title %}{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/app.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/css/jquery.sidr.dark.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/awesome.min.css">
+    </head>
+    <body class="alterBackground">
+        {% block content %}{% endblock %}
+        <div id="sidr" class="sidr">
+            <div>
+                <ul style="list-style-type: none;margin:0;padding:0;">
+                    <li><p id="brand" style="font-size:22px;background-color:#222;color:#eee;padding:6px 0px 6px 12px;">zip.ly
+                    </p>
+                    <p style="padding:0px 8px 5px 0px;background-color:#222;color:#eee;font-size:14px;text-align:right;margin:0px;" >{{email}}</p>
+
+                    </li>
+                    <li><a onclick="javascript:$.sidr()" href="/templates"> <button type="button" class="btn btn-default btn-lg btn-block sqButton">&nbsp;&nbsp;<i class="fa fa-file-o"></i> Templates</button></a></li>
+                    <li><a onclick="javascript:$.sidr()" href="/drafts"><button type="button" class="btn btn-default btn-lg btn-block sqButton">&nbsp;&nbsp;<i class="fa fa-pencil-square-o"></i> Drafts</button></a></li>
+                    <li><a onclick="javascript:$.sidr()" href="/agreements"> <button type="button" class="btn btn-default btn-lg btn-block sqButton">&nbsp;&nbsp;<i class="fa fa-lock"></i> Agreements</button></a></li>
+                    <li><a onclick="javascript:$.sidr()" href="/account"> <button type="button" class="btn btn-default btn-lg btn-block sqButton">&nbsp;&nbsp;<i class="fa fa-user"></i> Account</button></a></li>
+                    <li><a onclick="javascript:$.sidr()" href="/logout"> <button type="button" class="btn btn-default btn-lg btn-block sqButton">&nbsp;&nbsp;<i class="fa fa-power-off"></i> Logout</button></a></li>
+                </ul>
+            </div>
+        </div>
+        {% block footer %}{% endblock %}
+        <script type="text/javascript" src="/static/app/jquery-2.0.2.js"></script>
+        <script type="text/javascript" src="/static/app/jquery.sidr.min.js"></script>
+        <script type="text/javascript" src="/static/app/bootstrap.min.js"></script>
+        {% block scriptblock %}{% endblock %}
+        <script src="/static/app/app.js"></script>
+        <script>
+            var _gaq=[['_setAccount','UA-45841900-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

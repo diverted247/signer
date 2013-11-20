@@ -1,0 +1,35 @@
+{% extends "_base.html" %}
+{% block title %}Agreement{% endblock %}
+{% block content %}
+<div class="toolbar">
+  <p id="brand">
+    <span class="btn-group header">
+        <a href="/agreements"><button type="button" class="btn btn-default">Back</button></a>
+        <a href="/agreement/pdf/{{ item.id }}"><button type="button" class="btn btn-default">Signed PDF</button></a>
+    </span>
+  </p>
+</div>
+<div style="padding:20px">
+    <form role="form">
+        <div class="form-group">
+            <label for="item_name">Name</label>
+            <input id="item_name" name="name" type="text" class="form-control" value="{{ item.name }}"/>
+        </div>
+        <div class="form-group">
+            <label for="item_text">Template ( markdown )</label>
+            <textarea id="item_text" name="text" class="form-control" rows="10">{{ item.text }}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="item_signers">Signers ( line: email,name,company,title )</label>
+            <textarea id="item_signers" name="signers" class="form-control" rows="5">{{ item.signers }}</textarea>
+        </div>
+    </form>
+</div>
+{% endblock %}
+{% block footerblock %}
+<footer>
+<p style="text-align:center;font-size:10px;">&copy; zip.ly 2013</p>
+<a id="simple-menu"></a>
+</footer>
+{% endblock %}
+{% block scriptblock %}{% endblock %}

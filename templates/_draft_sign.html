@@ -1,0 +1,21 @@
+{% extends "_base.html" %}
+{% block title %}Draft Sign{% endblock %}
+{% block content %}
+<style>
+html, body{
+    overflow:hidden;
+}
+</style>
+<div style="padding:0px">
+    <canvas id="signature_canvas" width="100%" height="100%"></canvas>
+</div>
+<input id="item_id" type="hidden" name="Language" value="{{item.id}}">
+<input id="item_userid" type="hidden" name="Language" value="{{item.userid}}">
+<input id="item_name" type="hidden" name="Language" value="{{item.name}}">
+<input id="item_signers" type="hidden" name="Language" value="{{item.signers}}">
+{% endblock %}
+{% block footerblock %}{% endblock %}
+{% block scriptblock %}
+<script src="/static/js/vendor/easeljs-0.7.0.min.js"></script>
+<script src="/static/app/signature.js"></script>
+{% endblock %}
